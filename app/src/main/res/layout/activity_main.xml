@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Operaciones Matemáticas"
-        android:textSize="25sp"
+        android:textSize="28sp"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
         android:textAlignment="center"
@@ -25,6 +25,7 @@
         android:src="@drawable/logo2"
         android:layout_marginBottom="40dp"/>
     <EditText
+        android:id="@+id/operando1"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_margin="10dp"
@@ -33,6 +34,7 @@
         android:hint="Ingrese el número 1"
         android:inputType="numberDecimal"/>
     <EditText
+        android:id="@+id/operando2"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_margin="10dp"
@@ -96,7 +98,8 @@
             android:layout_height="wrap_content"
             android:textSize="30dp"
             android:text="+"
-            android:textColor="@android:color/holo_blue_dark"/>
+            android:textColor="@android:color/holo_blue_dark"
+            android:onClick="onClick"/>
 
         <Button
             android:id="@+id/btnResta"
@@ -106,7 +109,8 @@
             android:textSize="30dp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/btnSuma"/>
+            android:layout_toRightOf="@+id/btnSuma"
+            android:onClick="onClick"/>
 
         <Button
             android:id="@+id/btnProducto"
@@ -116,7 +120,8 @@
             android:textSize="30dp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/btnResta"/>
+            android:layout_toRightOf="@+id/btnResta"
+            android:onClick="onClick"/>
 
         <Button
             android:id="@+id/btnCociente"
@@ -126,11 +131,13 @@
             android:textSize="30dp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/btnProducto"/>
+            android:layout_toRightOf="@+id/btnProducto"
+            android:onClick="onClick"/>
 
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/tvResultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Resultado: "
